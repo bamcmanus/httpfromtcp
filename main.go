@@ -29,7 +29,7 @@ func main() {
 		}
 		byteString := string(buffer[:bytesRead])
 		parts := strings.Split(byteString, "\n")
-		for i:=0; i < len(parts)-1; i++ {
+		for i:=range len(parts)-1 {
 			currentLine += parts[i]
 			fmt.Printf("read: %s\n", currentLine)	
 			currentLine = ""
