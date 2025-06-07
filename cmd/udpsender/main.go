@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func main () {
+func main() {
 	addr, err := net.ResolveUDPAddr("udp", ":42069")
 	if err != nil {
 		log.Fatal("failed to resolve UDP address")

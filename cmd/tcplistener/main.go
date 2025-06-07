@@ -50,7 +50,7 @@ func getLinesChannel(f io.ReadCloser) <-chan string {
 			}
 			byteString := string(buffer[:bytesRead])
 			parts := strings.Split(byteString, "\n")
-			for i:=range len(parts)-1 {
+			for i := range len(parts) - 1 {
 				currentLine += parts[i]
 				strChan <- currentLine
 				currentLine = ""
