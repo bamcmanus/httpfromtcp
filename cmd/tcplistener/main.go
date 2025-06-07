@@ -24,7 +24,9 @@ func main() {
 		for line := range getLinesChannel(conn) {
 			fmt.Println(line)
 		}
-		conn.Close()
+		if err := conn.Close(); err != nil {
+			log.Println("failed to close connection:", err)
+		}
 		fmt.Println("connection closed")
 	}
 
